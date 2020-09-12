@@ -52,7 +52,7 @@
                                   #FIXED 'http://dita.oasis-open.org/architecture/2005/'
               %DITAArchNSPrefix;:DITAArchVersion
                          CDATA
-                                  '1.3'
+                                  '2.0'
   "
 >
 
@@ -156,15 +156,6 @@
                %basic.ph; |
                %data.elements.incl; |
                %foreign.unknown.incl; |
-               %txt.incl;"
->
-<!ENTITY % example.cnt
-              "#PCDATA |
-               %basic.block; |
-               %basic.ph; |
-               %data.elements.incl; |
-               %foreign.unknown.incl; |
-               %title; |
                %txt.incl;"
 >
 <!ENTITY % section.cnt
@@ -306,7 +297,6 @@
 <!ENTITY % body.content
                        "(%body.cnt; |
                          %bodydiv; |
-                         %example; |
                          %section;)*"
 >
 <!ENTITY % body.attributes
@@ -357,20 +347,6 @@
 >
 <!ELEMENT  sectiondiv %sectiondiv.content;>
 <!ATTLIST  sectiondiv %sectiondiv.attributes;>
-
-
-<!--                    LONG NAME: Example                         -->
-<!ENTITY % example.content
-                       "(%example.cnt;)*"
->
-<!ENTITY % example.attributes
-              "spectitle
-                          CDATA
-                                    #IMPLIED
-               %univ-atts;"
->
-<!ELEMENT  example %example.content;>
-<!ATTLIST  example %example.attributes;>
 
 
 <!--                    LONG NAME: prolog                          -->
@@ -510,7 +486,6 @@
 <!ATTLIST  abstract       class CDATA "- topic/abstract "   >
 <!ATTLIST  body           class CDATA "- topic/body "       >
 <!ATTLIST  bodydiv        class CDATA "- topic/bodydiv "    >
-<!ATTLIST  example        class CDATA "- topic/example "    >
 <!ATTLIST  link           class CDATA "- topic/link "       >
 <!ATTLIST  linkinfo       class CDATA "- topic/linkinfo "   >
 <!ATTLIST  linklist       class CDATA "- topic/linklist "   >

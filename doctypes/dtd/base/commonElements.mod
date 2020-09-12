@@ -61,6 +61,7 @@
 <!ENTITY % basic.block
               "%dl; |
                %div; |
+               %example; |
                %fig; |
                %image; |
                %lines; |
@@ -106,6 +107,7 @@
 <!ENTITY % basic.block.notbl
               "%dl; |
                %div; |
+               %example; |
                %fig; |
                %image; |
                %lines; |
@@ -121,6 +123,7 @@
 <!ENTITY % basic.block.nonote
               "%dl; |
                %div; |
+               %example; |
                %fig; |
                %image; |
                %lines; |
@@ -137,6 +140,7 @@
 <!ENTITY % basic.block.nopara
               "%dl; |
                %div; |
+               %example; |
                %fig; |
                %image; |
                %lines; |
@@ -153,6 +157,7 @@
 <!ENTITY % basic.block.nolq
               "%dl; |
                %div; |
+               %example; |
                %fig; |
                %image; |
                %lines; |
@@ -166,9 +171,27 @@
                %table; |
                %ul;"
 >
+<!ENTITY % basic.block.noexample
+              "%dl; |
+               %div; |
+               %fig; |
+               %image; |
+               %lines; |
+               %lq; |
+               %note; |
+               %object; |
+               %ol; |
+               %p; |
+               %pre; |
+               %simpletable; |
+               %sl; |
+               %table; |
+               %ul;"
+>
 <!ENTITY % basic.block.notbnofg
               "%dl; |
                %div; |
+               %example; |
                %image; |
                %lines; |
                %lq; |
@@ -340,6 +363,15 @@
                %basic.ph; |
                %data.elements.incl; |
                %foreign.unknown.incl; |
+               %txt.incl;"
+>
+<!ENTITY % example.cnt
+              "#PCDATA |
+               %basic.block.noexample; |
+               %basic.ph; |
+               %data.elements.incl; |
+               %foreign.unknown.incl; |
+               %title; |
                %txt.incl;"
 >
 <!ENTITY % fig.cnt
@@ -1016,6 +1048,18 @@
 <!ELEMENT  dd %dd.content;>
 <!ATTLIST  dd %dd.attributes;>
 
+<!--                    LONG NAME: Example                         -->
+<!ENTITY % example.content
+                       "(%example.cnt;)*"
+>
+<!ENTITY % example.attributes
+              "spectitle
+                          CDATA
+                                    #IMPLIED
+               %univ-atts;"
+>
+<!ELEMENT  example %example.content;>
+<!ATTLIST  example %example.attributes;>
 
 <!--                    LONG NAME: Figure                          -->
 <!ENTITY % fig.content
@@ -1442,7 +1486,8 @@
 
 <!--                    LONG NAME: Simple Table                    -->
 <!ENTITY % simpletable.content
-                       "((%sthead;)?,
+                       "((%title;)?,
+                         (%sthead;)?,
                          (%strow;)+)"
 >
 <!ENTITY % simpletable.attributes
@@ -1491,6 +1536,22 @@
 <!ENTITY % stentry.attributes
               "specentry
                           CDATA
+                                    #IMPLIED
+               colspan
+                          NMTOKEN
+                                    #IMPLIED
+               rowspan
+                          NMTOKEN
+                                    #IMPLIED                     
+               scope
+                          (row |
+                           col |
+                           rowgroup |
+                           colgroup |
+                           -dita-use-conref-target)
+                                    #IMPLIED
+               headers
+                          NMTOKENS
                                     #IMPLIED
                %univ-atts;"
 >
@@ -1671,6 +1732,7 @@
 <!ATTLIST  draft-comment  class CDATA "- topic/draft-comment ">
 <!ATTLIST  dt             class CDATA "- topic/dt "         >
 <!ATTLIST  dthd           class CDATA "- topic/dthd "       >
+<!ATTLIST  example        class CDATA "- topic/example "    >
 <!ATTLIST  fallback       class CDATA "- topic/fallback "   >
 <!ATTLIST  fig            class CDATA "- topic/fig "        >
 <!ATTLIST  figgroup       class CDATA "- topic/figgroup "   >
