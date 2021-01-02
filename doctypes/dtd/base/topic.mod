@@ -82,22 +82,6 @@
 >%metaXML;
 
 <!-- ============================================================= -->
-<!--                COMMON ENTITY DECLARATIONS                     -->
-<!-- ============================================================= -->
-
-<!-- Use of this entity is deprecated; the nbsp entity will be 
-     removed in DITA 2.0.                                          -->
-<!ENTITY nbsp                   "&#xA0;"                             >
-
-
-<!-- ============================================================= -->
-<!--                    NOTATION DECLARATIONS                      -->
-<!-- ============================================================= -->
-<!--                    DITA uses the direct reference model; 
-                        notations may be added later as required   -->
-
-
-<!-- ============================================================= -->
 <!--                    STRUCTURAL MEMBERS                         -->
 <!-- ============================================================= -->
 
@@ -106,11 +90,6 @@
   "topic
   "
 > 
-
-<!-- ============================================================= -->
-<!--                    COMMON ATTLIST SETS                        -->
-<!-- ============================================================= -->
-
 
 <!-- ============================================================= -->
 <!--                    SPECIALIZATION OF DECLARED ELEMENTS        -->
@@ -426,9 +405,6 @@
                            yes |
                            -dita-use-conref-target)
                                     #IMPLIED
-               mapkeyref
-                          CDATA
-                                    #IMPLIED
                %relational-atts;
                %univ-atts;
                spectitle
@@ -467,9 +443,6 @@
                           (no |
                            yes |
                            -dita-use-conref-target)
-                                    #IMPLIED
-               mapkeyref
-                          CDATA
                                     #IMPLIED
                %relational-atts;
                %univ-atts;"

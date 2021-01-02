@@ -51,9 +51,6 @@ PUBLIC "-//OASIS//ELEMENTS DITA 2.0 Topic//EN"
       <modulePublicIds>
         <dtdEnt>-//OASIS//ENTITIES DITA<var presep=" " name="ditaver"/> Topic//EN</dtdEnt>
         <dtdMod>-//OASIS//ELEMENTS DITA<var presep=" " name="ditaver"/> Topic//EN</dtdMod>
-        <xsdMod>urn:oasis:names:tc:dita:xsd:topicMod.xsd<var presep=":" name="ditaver"/></xsdMod>
-        <xsdGrp>urn:oasis:names:tc:dita:xsd:topicGrp.xsd<var presep=":" name="ditaver"/></xsdGrp>
-        <rncMod>urn:oasis:names:tc:dita:rnc:topicMod.rnc<var presep=":" name="ditaver"/></rncMod>
         <rngMod>urn:oasis:names:tc:dita:rng:topicMod.rng<var presep=":" name="ditaver"/></rngMod>
       </modulePublicIds>
     </moduleMetadata>
@@ -197,7 +194,7 @@ PUBLIC "-//OASIS//ELEMENTS DITA 2.0 Topic//EN"
         <attribute name="type"/>
       </optional>
       <optional>
-        <attribute name="cascade" dita:since="1.3"/>
+        <attribute name="cascade"/>
       </optional>
       <optional>
         <attribute name="format"/>
@@ -675,9 +672,6 @@ PUBLIC "-//OASIS//ELEMENTS DITA 2.0 Topic//EN"
               </choice>
             </attribute>
           </optional>
-          <optional>
-            <attribute name="mapkeyref"/>
-          </optional>
           <ref name="relational-atts"/>
           <ref name="univ-atts"/>
           <optional>
@@ -755,9 +749,6 @@ PUBLIC "-//OASIS//ELEMENTS DITA 2.0 Topic//EN"
                 <value>-dita-use-conref-target</value>
               </choice>
             </attribute>
-          </optional>
-          <optional>
-            <attribute name="mapkeyref"/>
           </optional>
           <ref name="relational-atts"/>
           <ref name="univ-atts"/>

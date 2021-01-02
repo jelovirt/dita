@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
- "reference.dtd">
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
 <reference id="mapref" xml:lang="en-us">
 <title><xmlelement>mapref</xmlelement></title>
   <shortdesc>A map reference is a mechanism for referencing a DITA map from a DITA map.</shortdesc>
@@ -50,10 +48,10 @@
       <sectiondiv id="mapref-attributes">
         <p>The following attributes are available on this element: <xref
             keyref="attributes-universal"/>, <xref
-            keyref="attributes-linkRelationship"/> (with narrowed definitions of
+            keyref="attributes-common/linkatts"/> (with narrowed definitions of
             <xmlatt>href</xmlatt> and <xmlatt>format</xmlatt>, given below), <xref
-            keyref="attributes-commonMap"/>, <xref
-            keyref="attributes-topicrefElement"/>, <xref
+            keyref="attributes-common/commonmapatts"/>, <xref
+            keyref="attributes-common/topicrefatts"/>, <xref
             keyref="attributes-keyref"><xmlatt>keyref</xmlatt></xref>, and <xref
             keyref="attributes-keys"><xmlatt>keys</xmlatt></xref>.</p>
         <dl>
