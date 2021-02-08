@@ -3,24 +3,24 @@
 <map>
  <title>SubjectScheme elements</title>
  <topicref href="containers/subjectScheme.dita">  
-  <topicref href="base/attributedef.dita" keys="attributedef" />  
-  <topicref href="base/defaultSubject.dita" keys="defaultSubject" />
-  <topicref href="base/elementdef.dita" keys="elementdef" />
-  <topicref href="base/enumerationdef.dita" keys="enumerationdef" />
-  <topicref href="base/hasInstance.dita" keys="hasInstance" />
-  <topicref href="base/hasKind.dita" keys="hasKind" />
-  <topicref href="base/hasNarrower.dita" keys="hasNarrower" />
-  <topicref href="base/hasPart.dita" keys="hasPart" />
-  <topicref href="base/hasRelated.dita" keys="hasRelated" />
-  <topicref href="base/relatedSubjects.dita" keys="relatedSubjects" />
-  <topicref href="base/schemeref.dita" keys="schemeref" />
-  <topicref href="base/subjectdef.dita" keys="subjectdef" />
-  <topicref href="base/subjectHead.dita" keys="subjectHead" />
-  <topicref href="base/subjectHeadMeta.dita" keys="subjectHeadMeta" />
-  <topicref href="base/subjectRel.dita" keys="subjectRel" />
-  <topicref href="base/subjectRelTable.dita" keys="subjectRelTable" />
-  <topicref href="base/subjectRelHeader.dita" keys="subjectRelHeader" />
-  <topicref href="base/subjectRole.dita" keys="subjectRole" />
-  <topicref href="base/subjectScheme.dita" keys="subjectScheme" />
+  <topicref keyref="elements-attributedef" />  
+  <topicref keyref="elements-defaultSubject" />
+  <topicref keyref="elements-elementdef" />
+  <topicref keyref="elements-enumerationdef" />
+  <topicref keyref="elements-hasInstance" />
+  <topicref keyref="elements-hasKind" />
+  <topicref keyref="elements-hasNarrower" />
+  <topicref keyref="elements-hasPart" />
+  <topicref keyref="elements-hasRelated" />
+  <topicref keyref="elements-relatedSubjects" />
+  <topicref keyref="elements-schemeref" />
+  <topicref keyref="elements-subjectdef" />
+  <topicref keyref="elements-subjectHead" />
+  <topicref keyref="elements-subjectHeadMeta" />
+  <topicref keyref="elements-subjectRel" />
+  <topicref keyref="elements-subjectRelTable" />
+  <topicref keyref="elements-subjectRelHeader" />
+  <topicref keyref="elements-subjectRole" />
+  <topicref keyref="elements-subjectScheme" />
  </topicref>
 </map>

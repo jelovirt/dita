@@ -17,11 +17,10 @@
       <p>For DITA resources, fragment identifiers can be used with the URI to address individual
         elements. The fragment identifier is the part of the URI that starts with a number sign (#),
         for example, <codeph>#topicid/elementid</codeph>. URI references also can include a query
-        component that is introduced with a question mark (?).  DITA processors <term
-          outputclass="RFC-2119">MAY</term> ignore queries on URI references to
-        DITA resources. <ph >URI references that address components in the same
-          document <term outputclass="RFC-2119">MAY</term> consist of just the
-          fragment identifier. </ph></p>
+        component that is introduced with a question mark (?). </p>
+      <p>DITA processors <term outputclass="RFC-2119">MAY</term> ignore queries on URI references to
+        DITA resources. <ph>URI references that address components in the same document <term
+            outputclass="RFC-2119">MAY</term> consist of just the fragment identifier. </ph></p>
       <p>For addressing DITA elements within maps and topics or individual topics within documents
         containing multiple topics, URI references must include the appropriate DITA-defined
         fragment identifier. URI references can be relative or absolute. A relative URI reference
@@ -108,11 +107,11 @@
         <strow>
           <stentry>Reference an element within a map</stentry>
           <stentry><codeph>"http://example.com/map.ditamap#elementID"</codeph> (and a value of
-            "ditamap" for the <xmlatt>format</xmlatt> attribute)</stentry>
+              <keyword>ditamap</keyword> for the <xmlatt>format</xmlatt> attribute)</stentry>
         </strow>
         <strow>
           <stentry>Reference a map element within the same map document</stentry>
-          <stentry><codeph>"#elementID"</codeph> (and a value of "ditamap" for the
+          <stentry><codeph>"#elementID"</codeph> (and a value of <keyword>ditamap</keyword> for the
               <xmlatt>format</xmlatt> attribute)</stentry>
         </strow>
         <strow>
@@ -124,13 +123,13 @@
         <strow>
           <stentry>Reference an element within a local map</stentry>
           <stentry>
-            <codeph>"filename.ditamap#elementid"</codeph> (and a value of "ditamap" for the
-              <xmlatt>format</xmlatt> attribute)</stentry>
+            <codeph>"filename.ditamap#elementid"</codeph> (and a value of <keyword>ditamap</keyword>
+            for the <xmlatt>format</xmlatt> attribute)</stentry>
         </strow>
         <strow>
           <stentry>Reference a local map </stentry>
-          <stentry><codeph>"filename.ditamap"</codeph> (and a value of "ditamap" for the
-              <xmlatt>format</xmlatt> attribute)</stentry>
+          <stentry><codeph>"filename.ditamap"</codeph> (and a value of <keyword>ditamap</keyword>
+            for the <xmlatt>format</xmlatt> attribute)</stentry>
         </strow>
         <strow>
           <stentry>Reference a local topic </stentry>
@@ -152,9 +151,10 @@
         </strow>
         <strow >
           <stentry>Reference a peer map for cross-deliverable linking</stentry>
-          <stentry><codeph>"../book-b/book-b.ditamap"</codeph> (and a value of "ditamap" for the
-              <xmlatt>format</xmlatt> attribute, a value of "peer" for the <xmlatt>scope</xmlatt>
-            attribute, and a value for the <xmlatt>keyscope</xmlatt> attribute) </stentry>
+          <stentry><codeph>"../book-b/book-b.ditamap"</codeph> (and a value of
+              <keyword>ditamap</keyword> for the <xmlatt>format</xmlatt> attribute, a value of
+              <keyword>peer</keyword> for the <xmlatt>scope</xmlatt> attribute, and a value for the
+              <xmlatt>keyscope</xmlatt> attribute) </stentry>
         </strow>
       </simpletable>
     </example>

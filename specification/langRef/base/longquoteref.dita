@@ -9,6 +9,8 @@
 <prolog><metadata>
 <keywords>
         <indexterm>elements<indexterm>body<indexterm><xmlelement>longquoteref</xmlelement></indexterm></indexterm></indexterm>
+                <indexterm>processing
+                        expectations<indexterm><xmlelement>longquoteref</xmlelement></indexterm></indexterm>
         <indexterm>quotations<indexterm>reference to source</indexterm></indexterm></keywords>
 </metadata></prolog>
 <refbody>
@@ -22,13 +24,13 @@
       <title>Attributes</title>
       <p>The following attributes are available on this element: <xref
           keyref="attributes-universal"/>, <xref
-          keyref="attributes-linkRelationship"/>, and <xref
+          keyref="attributes-common/linkatts"/>, and <xref
           keyref="attributes-keyref"><xmlatt>keyref</xmlatt></xref>.</p>
     </section>
 <example id="example" otherprops="examples"><title>Example</title>
-            <draft-comment author="Kristen J Eberlein" time="05 August 2018">
+            <draft-comment author="Kristen J Eberlein" time="05 August 2018" audience="tc-reviewers">
                 <p>When trying to craft a new example for this element, I realized I don't
-                    understand  what value it provides that is not already available in
+                    understand what value it provides that is not already available in
                         <xmlelement>lq</xmlelement>.</p>
             </draft-comment>
             <p>In the following code sample, the <xmlelement>longdescref</xmlelement> element

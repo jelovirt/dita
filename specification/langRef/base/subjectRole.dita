@@ -9,7 +9,6 @@
   subjects in the same row of the current <xmlelement>subjectRelTable</xmlelement>.</shortdesc>
 <prolog><metadata>
 <keywords>
-                <indexterm><xmlelement>subjectRole</xmlelement></indexterm>
                 <indexterm>subjectScheme<indexterm>
                                 elements<indexterm><xmlelement>subjectRole</xmlelement></indexterm></indexterm></indexterm></keywords>
 </metadata></prolog>
@@ -21,23 +20,23 @@
      <xmlelement>subjectRelHeader</xmlelement>, the <xmlelement>subjectRole</xmlelement> element
     defines the category of subject or relationship provided by that column.</p>
   </section>
-    <section id="specialization-hierarchy">
+    <section id="specialization-hierachy">
       <title>Specialization hierarchy</title>
-      <p>This element is specialized from <xref keyref="relcell"/> in the map module.</p>
-      <!--<p>- map/relcell subjectScheme/subjectRole</p>-->
+      <p>The <xmlelement>subjectRole</xmlelement> element is specialized from
+          <xmlelement>relcell</xmlelement>. It is defined in the subject scheme module.</p>
     </section>
   <section id="attributes">
    <title>Attributes</title>
    <p>The following attributes are available on this element: <xref
      keyref="attributes-universal"/> and <xref
-     keyref="attributes-topicrefElement"/>. This element also uses
+     keyref="attributes-common/topicrefatts"/>. This element also uses
      <xmlatt>scope</xmlatt>, <xmlatt>format</xmlatt>, and <xmlatt>type</xmlatt> from <xref
-     keyref="attributes-linkRelationship"/>.</p>
+     keyref="attributes-common/linkatts"/>.</p>
   </section>
 <example id="example" otherprops="examples">
 <title>Example</title>
 <p>For a complete example in the context of the <xmlelement>subjectRelTable</xmlelement>, see <xref
-href="subjectRelTable.dita#subjectRelTable/example"/>.</p>
+  keyref="elements-subjectRelTable/example"/>.</p>
 </example>
 </refbody>
 </reference>

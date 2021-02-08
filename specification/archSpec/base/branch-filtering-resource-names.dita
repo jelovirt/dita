@@ -4,7 +4,7 @@
 <concept id="resource-names" xml:lang="en-us" >
     <title>Branch filtering: Impact on resource and key names</title>
     <shortdesc>When map branches are cloned by a processor in order to support multiple condition
-        sets, processors must manage conflicting resource and key names. The ditavalref domain
+        sets, processors must manage conflicting resource and key names. The DITAVALref domain
         includes metadata elements that authors can use to specify how resource and key names are
         renamed.</shortdesc>
     <prolog>
@@ -41,9 +41,8 @@
         <section id="metadata-elements">
             <title>Metadata elements in the DITAVAL reference domain</title>
             <p>Metadata within the <xmlelement>ditavalref</xmlelement> element makes it possible to
-                control changes to resource names and key scope names, <ph 
-                    >so that each distinct filtered copy can be referenced in a predictable
-                    manner.</ph></p>
+                control changes to resource names and key scope names, so that each distinct
+                filtered copy can be referenced in a predictable manner.</p>
             <dl>
                 <dlentry>
                     <dt><xmlelement>dvrResourcePrefix</xmlelement></dt>
@@ -145,9 +144,10 @@
 &lt;/topicref></codeblock>
             <p>In this situation, the resource <filepath>branchChild.dita</filepath> is given a
                 prefix based on both the reference to <filepath>parent.ditaval</filepath> and the
-                reference to <filepath>child.ditaval</filepath>. The value "childPrefix-" is
-                specified in the <xmlelement>ditavalref</xmlelement> that is nested more deeply
-                within the branch, so it appears closer to the original resource name. The resource
+                reference to <filepath>child.ditaval</filepath>. The value
+                    <keyword>childPrefix-</keyword> is specified in the
+                    <xmlelement>ditavalref</xmlelement> that is nested more deeply within the
+                branch, so it appears closer to the original resource name. The resource
                     <filepath>branchChild.dita</filepath> would result in
                     <filepath>parentPrefix-childPrefix-branchChild.dita</filepath>. Suffixes (if
                 specified) would be added in a similar manner, resulting in a name like
@@ -158,9 +158,15 @@
             <title>Handling resource name conflicts</title>
             <p>It is an error if <xmlelement>ditavalref</xmlelement>-driven branch cloning results
                 in multiple copies of a topic that have the same resolved name. Processors <term
-                    outputclass="RFC-2119">SHOULD</term> report an error in such
-                cases. Processors <term outputclass="RFC-2119">MAY</term> recover
-                by using an alternate naming scheme for the conflicting topics.</p>
+                    outputclass="RFC-2119">SHOULD</term> report an error in such cases. Processors
+                    <term outputclass="RFC-2119">MAY</term> recover by using an alternate naming
+                scheme for the conflicting topics.</p>
+            <!--IGNORE may-must-should word-->
+            <draft-comment author="Kristen J Eberlein" time="04 July 2019" audience="spec-editors">
+                <p>In the following paragraph, should we replace the lower-case should with a
+                    SHOULD?</p>
+            </draft-comment>
+            <!--IGNORE may-must-should word-->
             <p >In rare cases, a single topic might appear in different branches that
                 set different conditions, yet still produce the same result. For example, a topic
                 might appear in both the admin and novice copies of a branch but not contain content

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="fig" xml:lang="en-us">
+<title><xmlelement>fig</xmlelement></title>
+  <shortdesc id="shortdesc">A figure is a container for a variety of objects, including artwork,
+    images, code samples, equations, and tables.</shortdesc>
+<refbody>
+    <section id="attributes">
+      <title>Attributes</title>
+      <p platform="dita">The following attributes are available on this element: <xref
+          keyref="attributes-universal"/>, <xref keyref="attributes-common/displayatts"/>, and <xref
+          keyref="attributes-common/spectitle"/>.</p>
+      <p platform="lwdita">The following attributes are available on this element: <xref
+          keyref="attributes-universal"/> and <xref keyref="attributes-common/displayatts"/>.</p>
+    </section>
+</refbody>
+</reference>
+

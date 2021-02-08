@@ -3,12 +3,11 @@
 <map>
  <title>Map group elements</title>
  <topicref href="containers/mapgroup-d.dita" >
-  <topicref href="base/anchorref.dita" keys="anchorref" />
-  <topicref href="base/keydef.dita" keys="keydef" />
-  <topicref href="base/mapref.dita" keys="mapref" />
-  <topicref href="base/topicgroup.dita" keys="topicgroup" />
-  <topicref href="base/topichead.dita" keys="topichead" />
-  <topicref href="base/topicset.dita" keys="topicset" />
-  <topicref href="base/topicsetref.dita" keys="topicsetref" />
+  <topicref keyref="elements-anchorref" />
+  <topicref keyref="elements-keydef" />
+  <topicref keyref="elements-mapref" />
+  <topicref keyref="elements-mapresources"/>
+  <topicref keyref="elements-topicgroup" />
+  <topicref keyref="elements-topichead" />
  </topicref>
 </map>

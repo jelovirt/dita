@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
- "reference.dtd">
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
 <reference id="q" xml:lang="en-us">
 <title><xmlelement>q</xmlelement></title>
 <shortdesc>A quotation is a small group of words that is taken from a text or speech and repeated by
@@ -10,28 +8,23 @@
       <metadata>
          <keywords>
             <indexterm>elements<indexterm>body<indexterm><xmlelement>q</xmlelement></indexterm></indexterm></indexterm>
-            <indexterm>processing
-               expectations<indexterm><xmlelement>q</xmlelement></indexterm></indexterm>
-            <indexterm>formatting
+            <indexterm>normative
+               statements<indexterm><xmlelement>q</xmlelement></indexterm></indexterm>
+            <indexterm>rendering
                expectations<indexterm><xmlelement>q</xmlelement></indexterm></indexterm>
             <indexterm>quotations<indexterm>short</indexterm></indexterm>
          </keywords>
       </metadata>
    </prolog>
 <refbody>
-      <section id="formatting-expectations">
-         <title>Formatting expectations</title>
-         <p>Processors typically render a quotation inline.</p>
-      </section>
-      <section id="processing-expectations">
-         <title>Processing expectations</title>
-         <p>Processors that render the <xmlelement>q</xmlelement> element <term
-               outputclass="RFC-2119">SHOULD</term> add appropriate styling, such as locale-specific
-            quotation marks.</p>
+      <section id="rendering-expectations">
+         <title>Rendering expectations</title>
+         <p>Processors add appropriate styling, such as locale-specific quotation marks, around the
+            contents of the <xmlelement>q</xmlelement> element and render it inline.</p>
       </section>
       <section id="attributes">
          <title>Attributes</title>
-         <p conref="../../common/conref-attribute.dita#conref-attribute/only-universal"/>
+         <p conkeyref="reuse-attributes/only-universal"/>
       </section>
 <example id="example" otherprops="examples"><title>Example</title>
          <p>In the following code sample, the <xmlelement>q</xmlelement> element contains a

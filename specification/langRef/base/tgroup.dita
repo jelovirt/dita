@@ -5,12 +5,11 @@
   id="tgroup"
   xml:lang="en-us">
   <title><xmlelement>tgroup</xmlelement></title>
-  <shortdesc>The <xmlelement>tgroup</xmlelement> element in a table contains the header and body
-    rows of a table.</shortdesc>
+  <shortdesc>A table group is a grouping of a table header and table body, based on the OASIS
+    Exchange Table Model.</shortdesc>
   <prolog>
     <metadata>
-      <keywords><indexterm>tgroup</indexterm><indexterm>table elements<indexterm
-          >tgroup</indexterm></indexterm></keywords>
+      <keywords><indexterm>table elements<indexterm><xmlelement>tgroup</xmlelement></indexterm></indexterm></keywords>
     </metadata>
   </prolog>
   <refbody>
@@ -19,14 +18,14 @@
       <p>The following attributes are available on this element: <xref
           keyref="attributes-universal"/> and the attribute
         defined below. This element also uses <xmlatt>colsep</xmlatt>, <xmlatt>rowsep</xmlatt>, and
-          <xmlatt>align</xmlatt> from <xref keyref="attributes-calsTable"/>.</p>
+          <xmlatt>align</xmlatt> from <xref keyref="attributes-common/complextableatts"/>.</p>
       <dl>
         <dlentry>
           <dt><xmlatt>cols</xmlatt>
-            <ph conref="../../common/conref-attribute.dita#conref-attribute/required-attr"/></dt>
+            <ph conkeyref="reuse-attributes/required-attr"/></dt>
           <dd>Indicates the number of columns in a <xmlelement>tgroup</xmlelement>.</dd>
         </dlentry>
       </dl>
     </section><example id="example" otherprops="examples"><title>Example</title><p>See <xref
-        href="table.dita"/>.</p></example></refbody>
+        keyref="elements-table"/>.</p></example></refbody>
 </reference>

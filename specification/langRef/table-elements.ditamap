@@ -3,17 +3,16 @@
 <map>
  <title>Table elements</title>
  <topicref href="containers/table-elements.dita" >
-  <?Pub Dtl?>
-  <topicref href="base/colspec.dita" keys="colspec" />
-  <topicref href="base/entry.dita" keys="entry" />
-  <topicref href="base/row.dita" keys="row" />
-  <topicref href="base/simpletable.dita" keys="simpletable" />
-  <topicref href="base/stentry.dita" keys="stentry" />
-  <topicref href="base/sthead.dita" keys="sthead" />
-  <topicref href="base/strow.dita" keys="strow" />
-  <topicref href="base/table.dita" keys="table" />
-  <topicref href="base/tbody.dita" keys="tbody" />
-  <topicref href="base/tgroup.dita" keys="tgroup" />
-  <topicref href="base/thead.dita" keys="thead" />
+  <topicref keyref="elements-colspec" />
+  <topicref keyref="elements-entry" />
+  <topicref keyref="elements-row" />
+  <topicref keyref="elements-simpletable" />
+  <topicref keyref="elements-stentry" />
+  <topicref keyref="elements-sthead" />
+  <topicref keyref="elements-strow" />
+  <topicref keyref="elements-table" />
+  <topicref keyref="elements-tbody" />
+  <topicref keyref="elements-tgroup" />
+  <topicref keyref="elements-thead" />
  </topicref>
 </map>

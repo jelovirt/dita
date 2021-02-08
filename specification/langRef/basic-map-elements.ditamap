@@ -3,17 +3,16 @@
 <map>
  <title>Basic map elements</title>
  <topicref href="containers/basic-map-elements.dita" id="mapelems" >
-  <topicref href="base/map.dita" keys="map" />
-  <topicref href="base/topicref.dita" keys="topicref" />
-  <topicref href="base/topicmeta.dita" keys="topicmeta" />
-  <topicref href="base/anchor.dita" keys="anchor" />
-  <topicref href="base/navref.dita" keys="navref" />
-  <topicref href="base/reltable.dita" keys="reltable" />
-  <topicref href="base/relrow.dita" keys="relrow" />
-  <topicref href="base/relcell.dita" keys="relcell" />
-  <topicref href="base/relheader.dita" keys="relheader" />
-  <topicref href="base/relcolspec.dita" keys="relcolspec" />
-  <topicref href="base/ux-window.dita"  keys="ux-window"
-   />
+  <topicref keyref="elements-map" />
+  <topicref keyref="elements-topicref" />
+  <topicref keyref="elements-topicmeta" />
+  <topicref keyref="elements-anchor" />
+  <topicref keyref="elements-navref" />
+  <topicref keyref="elements-reltable" />
+  <topicref keyref="elements-relrow" />
+  <topicref keyref="elements-relcell" />
+  <topicref keyref="elements-relheader" />
+  <topicref keyref="elements-relcolspec" />
+  <topicref keyref="elements-ux-window" />
  </topicref>
 </map>

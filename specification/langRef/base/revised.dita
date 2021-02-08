@@ -7,7 +7,8 @@
     development cycle, such as the date of the last modification, the original availability date,
     and the expiration date.</shortdesc>
 <prolog><metadata>
-<keywords><indexterm>revised</indexterm><indexterm>prolog elements<indexterm>revised</indexterm></indexterm>
+<keywords>
+                <indexterm>elements<indexterm>prolog<indexterm><xmlelement>revised</xmlelement></indexterm></indexterm></indexterm><indexterm>prolog elements<indexterm><xmlelement>revised</xmlelement></indexterm></indexterm>
 </keywords>
 </metadata></prolog>
 <refbody>
@@ -15,11 +16,11 @@
       <title>Attributes</title>
       <p>The following attributes are available on this element: <xref
           keyref="attributes-universal"/>, <xref
-          keyref="attributes-date"/>, and the attribute defined below.</p>
+          keyref="attributes-common/dateatts"/>, and the attribute defined below.</p>
       <dl>
         <dlentry id="modified">
           <dt><xmlatt>modified</xmlatt>
-            <ph conref="../../common/conref-attribute.dita#conref-attribute/required-attr"/></dt>
+            <ph conkeyref="reuse-attributes/required-attr"/></dt>
           <dd>The last modification date, entered as YYYY-MM-DD, where YYYY is the year, MM is the
             month from 01 to 12, and DD is the day from 01-31.</dd>
         </dlentry>
@@ -30,15 +31,15 @@
       <p>In the following example, an author specifies revision information within a topic.</p>
       <codeblock>&lt;prolog&gt;
   &lt;critdates&gt;
-    &lt;created date="1999-01-01" golive="1999-02-15" expiry="9999-09-09"/&gt;
-    <b>&lt;revised modified="2003-03-03" golive="2002-02-03" expiry="9999-09-09"/&gt;</b>
+    &lt;created date="2019-01-01" golive="2019-02-15" expiry="9999-09-09"/&gt;
+    <b>&lt;revised modified="2020-03-03" golive="2020-02-03" expiry="9999-09-09"/&gt;</b>
  &lt;/critdates&gt;
 &lt;/prolog&gt;</codeblock>
       <p>The same information could be specified in a map.</p>
       <codeblock>&lt;topicmeta>
   &lt;critdates&gt;
-    &lt;created date="1999-01-01" golive="1999-02-15" expiry="9999-09-09"/&gt;
-    <b>&lt;revised modified="2003-03-03" golive="2002-02-03" expiry="9999-09-09"/&gt;</b>
+    &lt;created date="2019-01-01" golive="2019-02-15" expiry="9999-09-09"/&gt;
+    <b>&lt;revised modified="2020-03-03" golive="2020-02-03" expiry="9999-09-09"/&gt;</b>
  &lt;/critdates&gt;
 &lt;/topicmeta&gt;</codeblock>
     </example>

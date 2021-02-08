@@ -6,7 +6,6 @@
     object.</shortdesc>
 <prolog><metadata>
 <keywords>
-        <indexterm>Long description reference</indexterm>
         <indexterm>elements<indexterm>body<indexterm><xmlelement>longdescref</xmlelement></indexterm></indexterm></indexterm>
         <indexterm>images<indexterm>long descriptions</indexterm></indexterm>
         <indexterm>objects<indexterm>long descriptions</indexterm></indexterm></keywords>
@@ -16,11 +15,13 @@
       <title>Attributes</title>
       <p>The following attributes are available on this element: <xref
           keyref="attributes-universal"/>, <xref
-          keyref="attributes-linkRelationship"/>, and <xref
+          keyref="attributes-common/linkatts"/>, and <xref
           keyref="attributes-keyref"><xmlatt>keyref</xmlatt></xref>.</p>
     </section>
     <example id="example" otherprops="examples">
       <title>Example</title>
+      <p>This section contains examples of how the <xmlelement>longdescref</xmlelement> element can
+        be used.</p>
       <fig>
         <title><xmlelement>longdescref</xmlelement> which references a local DITA
           description</title>

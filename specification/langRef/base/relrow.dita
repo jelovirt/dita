@@ -4,9 +4,8 @@
  "reference.dtd">
 <reference id="relrow" xml:lang="en-us">
 <title><xmlelement>relrow</xmlelement></title>
-<shortdesc>The <xmlelement>relrow</xmlelement> element defines a row in the relationship table
-         (<xmlelement>reltable</xmlelement>). It creates a relationship between the cells in the
-      row, which is expressed in output as links between the topics or resources referenced in those
+<shortdesc>A row in a relationship table creates a relationship between the cells in that row, which
+      is expressed in output as links between the topics or resources referenced in those
       cells.</shortdesc>
    <prolog>
       <metadata>
@@ -20,10 +19,10 @@
 <refbody>
       <section id="attributes">
          <title>Attributes</title>
-         <p conref="../../common/conref-attribute.dita#conref-attribute/only-universal"/>
+         <p conkeyref="reuse-attributes/only-universal"/>
       </section>
 <example id="example" otherprops="examples"><title>Example</title><p>See <xref
-href="reltable.dita"></xref>.</p></example>
+keyref="elements-reltable"/>.</p></example>
 </refbody>
 </reference>
 

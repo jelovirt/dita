@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
- "reference.dtd">
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
 <reference id="mapref" xml:lang="en-us">
 <title><xmlelement>mapref</xmlelement></title>
   <shortdesc>A map reference is a mechanism for referencing a DITA map from a DITA map.</shortdesc>
@@ -10,7 +8,7 @@
       <keywords>
         <indexterm>convenience
           elements<indexterm><xmlelement>mapref</xmlelement></indexterm></indexterm>
-        <indexterm>elements<indexterm>mapgroup<indexterm><xmlelement>mapref</xmlelement></indexterm></indexterm></indexterm>
+        <indexterm>mapgroup domain<indexterm><xmlelement>mapref</xmlelement></indexterm></indexterm>
       </keywords>
     </metadata>
   </prolog>
@@ -19,14 +17,25 @@
       <title>Usage information</title>
       <p>The <xmlelement>mapref</xmlelement> element is a convenience element. It is equivalent to a
           <xmlelement>topicref</xmlelement> element with the <xmlatt>format</xmlatt> attribute set
-        to "ditamap".</p>
+        to <keyword>ditamap</keyword>.</p>
     </section>
     <section id="processing-expectations">
       <title>Processing expectations</title>
       <p>The hierarchy of the referenced map is merged into the container map at the position of the
         reference, and the relationship tables of the child map are added to the parent map.</p>
-      <draft-comment author="Kristen J Eberlein" time="06 August 2018">
+      <draft-comment author="Kristen J Eberlein" time="06 August 2018" audience="tc-reviewers">
         <p>Should we make normative statements about the above points?</p>
+        <p>Discussed at DITA TC meeting on 02 July 2019. </p>
+        <p>Consensus: Yes, these need to be normative statements, but this is not the correct
+          location. We need architectural topics that address processing of map hierarchy and
+          relationship tables. This content should be located in the same chapter as the material
+          about subjectScheme maps; it probably should absorb content currently in Processing >
+          Navigation > TOC.</p>
+        <p>We should plan a review that covers both architectural and element-reference topics about
+          maps.</p>
+      </draft-comment>
+      <draft-comment author="Kristen J Eberlein" time="05 September 2020">
+        <p>The terms "container map" and "parent map" here are unclear. How are they different?</p>
       </draft-comment>
     </section>
     <section id="specialization-hierarchy">
@@ -39,18 +48,18 @@
       <sectiondiv id="mapref-attributes">
         <p>The following attributes are available on this element: <xref
             keyref="attributes-universal"/>, <xref
-            keyref="attributes-linkRelationship"/> (with narrowed definitions of
+            keyref="attributes-common/linkatts"/> (with narrowed definitions of
             <xmlatt>href</xmlatt> and <xmlatt>format</xmlatt>, given below), <xref
-            keyref="attributes-commonMap"/>, <xref
-            keyref="attributes-topicrefElement"/>, <xref
+            keyref="attributes-common/commonmapatts"/>, <xref
+            keyref="attributes-common/topicrefatts"/>, <xref
             keyref="attributes-keyref"><xmlatt>keyref</xmlatt></xref>, and <xref
             keyref="attributes-keys"><xmlatt>keys</xmlatt></xref>.</p>
         <dl>
-          <dlentry conref="../../common/conref-attribute.dita#conref-attribute/format-mapref">
+          <dlentry conkeyref="reuse-attributes/format-mapref">
             <dt/>
             <dd/>
           </dlentry>
-          <dlentry conref="../../common/conref-attribute.dita#conref-attribute/href-on-topicref">
+          <dlentry conkeyref="reuse-attributes/href-on-topicref">
             <dt/>
             <dd/>
           </dlentry>
@@ -58,11 +67,28 @@
       </sectiondiv>
     </section>
 <example id="example" otherprops="examples"><title>Example</title>
-      <p>In this example, XXX </p>
+      <p>The example shows how <xmlelement>mapref</xmlelement> elements are used to reference a
+        submap.</p>
+      <fig>
+        <title>DITA map for all element-reference topics
+          (<filepath>base-elements.ditamap</filepath>)</title>
+        <p>The <filepath>base-elements.ditamap</filepath> document references the
+            <filepath>map-group-elements.ditamap)</filepath>:</p>
+        <codeblock>&lt;map>
+ &lt;title>Base elements&lt;/title>
+ ...
+ &lt;topicref href="containers/domain-elements.dita" >
+  ...
+  <b>&lt;mapref href="map-group-elements.ditamap"/></b>
+  ...
+ &lt;/topicref>
+ ...
+&lt;/map></codeblock>
+      </fig>
       <fig>
         <title>DITA map for map-group elements
           (<filepath>map-group-elements.ditamap)</filepath></title>
-        <p>The <filepath>map-group-elements.ditamap)</filepath> document contains references to the
+        <p>The <filepath>map-group-elements.ditamap</filepath> document contains references to the
           element-reference topics for the map group domain. It is constructed as a map in order to
           enable easy editing of the child topics. </p>
         <codeblock>&lt;map>
@@ -75,23 +101,25 @@
   &lt;topicref keyref="topichead" />
  &lt;/topicref>
 &lt;/map></codeblock>
-      </fig>
-      <fig>
-        <title>DITA map for all element-reference topics (elements.ditamap)</title>
-        <p>The <filepath>elements.ditamap</filepath> document references
-            <filepath>map-group-elements.ditamap)</filepath>.</p>
-        <codeblock>&lt;map>
+      </fig><fig><title>Result after processing <filepath>base-elements.ditamap</filepath></title>
+        <p>After processing, the <filepath>base-elements.ditamap</filepath> contains the topic
+          references that originally were located in the submap:</p>
+<codeblock>&lt;map>
  &lt;title>Base elements&lt;/title>
  ...
- &lt;topicref href="containers/map-elements.dita" >
-  &lt;mapref href="basic-map-elements.ditamap"/>
-  &lt;mapref href="map-group-elements.ditamap"/>
+ &lt;topicref href="containers/domain-elements.dita" >
+  ...
+  <b>&lt;topicref keyref="mapgroup-d" >
+    &lt;topicref keyref="anchorref" />
+    &lt;topicref keyref="keydef" />
+    &lt;topicref keyref="mapref" />
+    &lt;topicref keyref="topicgroup" />
+    &lt;topicref keyref="topichead" />
+  &lt;/topicref></b>
+  ...
  &lt;/topicref>
  ...
 &lt;/map></codeblock>
-      </fig><fig><title>Rendered result</title>
-<codeblock>XXX</codeblock>
 </fig></example>
 </refbody>
 </reference>
-

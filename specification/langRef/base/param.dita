@@ -28,15 +28,13 @@
       <dl>
         <dlentry>
           <dt><xmlatt>name</xmlatt>
-            <ph conref="../../common/conref-attribute.dita#conref-attribute/required-attr"/></dt>
-          <dd>The name of the parameter.
-            <!--<ph conref="../../common/conref-attribute.dita#conref-attribute/define-CDATA"/>--></dd>
+            <ph conkeyref="reuse-attributes/required-attr"/></dt>
+          <dd>The name of the parameter.</dd>
         </dlentry>
         <dlentry>
           <dt><xmlatt>value</xmlatt></dt>
           <dd>Specifies the value of a run-time parameter that is specified by the
-              <xmlatt>name</xmlatt> attribute.
-            <!--<ph conref="../../common/conref-attribute.dita#conref-attribute/define-CDATA"/>--></dd>
+              <xmlatt>name</xmlatt> attribute.</dd>
         </dlentry>
         <dlentry>
           <dt><xmlatt>valuetype</xmlatt></dt>
@@ -58,7 +56,7 @@
                   identifier that refers to an object declaration in the document. The identifier
                   must be the value of the ID attribute set for the declared object element. </dd>
               </dlentry>
-              <dlentry conref="../../common/conref-attribute.dita#conref-attribute/ditauseconref">
+              <dlentry conkeyref="reuse-attributes/ditauseconref">
                 <dt/>
                 <dd/>
               </dlentry>
@@ -68,8 +66,7 @@
           <dt><xmlatt>type</xmlatt></dt>
           <dd>This attribute specifies for a user agent the type of values that will be found at the
             URI designated by <xmlatt>value</xmlatt>. <ph
-              conref="../../common/conref-attribute.dita#conref-attribute/nonstandard-type"/>
-            <!--<ph conref="../../common/conref-attribute.dita#conref-attribute/define-CDATA"/>-->
+              conkeyref="reuse-attributes/nonstandard-type"/>
             <ol id="ol_svg_2c2_z1b">
               <li>When <xmlatt>valuetype</xmlatt> is set to "ref", this attribute directly specifies
                 the content type of the resource designated by <xmlatt>value</xmlatt>.</li>
@@ -100,11 +97,11 @@
               <li>When the key specified by <xmlatt>keyref</xmlatt> is not resolvable, the value of
                 the <xmlatt>value</xmlatt> attribute is used as a fallback target for the
                   <xmlelement>param</xmlelement> element.</li>
-            </ol><p><!--<ph conref="../../common/conref-attribute.dita#conref-attribute/define-CDATA"/>--></p>
+            </ol>
           </dd>
         </dlentry>
       </dl>
     </section>
-<example id="example" otherprops="examples"><title>Example</title><p>See <xref href="object.dita"></xref>.</p></example>
+    <example id="example" otherprops="examples"><title>Example</title><p>See <xref keyref="elements-object"/>.</p></example>
 </refbody>
 </reference>

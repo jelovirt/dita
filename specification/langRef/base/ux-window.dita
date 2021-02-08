@@ -2,10 +2,10 @@
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
 <reference xml:lang="en-us" id="ux-window" >
   <title><xmlelement>ux-window</xmlelement></title>
-  <shortdesc>Use the <xmlelement>ux-window</xmlelement> element to provide specifications for a
-    window or viewport in which a user assistance topic or Web page can be displayed. The window or
-    viewport can be referenced by the <xmlelement>resourceid</xmlelement> element associated with a
-    topic or <xmlelement>topicref</xmlelement> element.</shortdesc>
+  <shortdesc>The <xmlelement>ux-window</xmlelement> element provides specifications for a window or
+    viewport in which a user assistance topic or web page can be displayed. The window or viewport
+    can be referenced by the <xmlelement>resourceid</xmlelement> element associated with a topic or
+      <xmlelement>topicref</xmlelement> element.</shortdesc>
   <prolog>
     <metadata>
       <keywords>
@@ -26,14 +26,14 @@
     <section id="attributes">
       <title>Attributes</title>
       <p>The following attributes are available on this element: <xref
-          keyref="attributes-id"/>, <xref
-          keyref="attributes-metadata"/>, <xref
+          keyref="attributes-universal/idatts"/>, <xref
+          keyref="attributes-universal/metadataatts"/>, <xref
           keyref="attributes-universal/class"/>, and the attributes
         defined below.</p>
       <dl>
         <dlentry>
           <dt id="uxatt-name"><xmlatt>name</xmlatt>
-            <ph conref="../../common/conref-attribute.dita#conref-attribute/required-attr"/></dt>
+            <ph conkeyref="reuse-attributes/required-attr"/></dt>
           <dd>The value used to refer to this window definition.</dd>
         </dlentry>
         <dlentry>
@@ -79,25 +79,25 @@
         </dlentry>
         <dlentry>
           <dt id="uxatt-features"><xmlatt>features</xmlatt></dt>
-          <dd>A list of other features (size, position, scrollbars, etc.) of the window. Each
-            feature name and value <ph>can not</ph> contain any blank space, and each feature name
-            and value <ph>is</ph> separated by a comma or other delimiter character.</dd>
+          <dd>A list of other features (size, position, scroll bars, etc.) of the window. Each
+            feature name and value can not contain any blank space, and each feature name and value
+            is separated by a comma or other delimiter character.</dd>
         </dlentry>
         <dlentry>
           <dt id="uxatt-relative"><xmlatt>relative</xmlatt></dt>
           <dd>Indicates whether the window dimensions are relative to the calling window or the
-            entire target display. The default value is "no". Allowable values are: <dl>
+            entire target display. The default value is <keyword>no</keyword>. Allowable values are: <dl>
               <dlentry>
                 <dt>no</dt>
-                <dd>The window dimensions specified on this element are absolute positions (not
-                  relative to the calling window).</dd>
+                <dd>The window dimensions specified on this element are absolute positions; they are
+                  not relative to the calling window.</dd>
               </dlentry>
               <dlentry>
                 <dt>yes</dt>
                 <dd>The window dimensions specified on this element are relative to the calling
                   window.</dd>
               </dlentry>
-              <dlentry conref="../../common/conref-attribute.dita#conref-attribute/ditauseconref">
+              <dlentry conkeyref="reuse-attributes/ditauseconref">
                 <dt/>
                 <dd/>
               </dlentry>
@@ -107,18 +107,24 @@
           <dt id="uxatt-full-screen"><xmlatt>full-screen</xmlatt></dt>
           <dd>Indicates whether the window is initially displayed in a maximized state. Allowable
             values are: "yes", "no", and <xref keyref="attributes-useconreftarget"
-              >-dita-use-conref-target</xref>. The default value is "no".</dd>
+              >-dita-use-conref-target</xref>. The default value is <keyword>no</keyword>.</dd>
         </dlentry>
       </dl>
     </section>
     <example id="example" otherprops="examples">
       <title>Example</title>
-      <p>In this example, a window with a name of "csh" is defined in the map. The window name is
-        later referenced by the <xmlatt>ux-windowref</xmlatt> attribute on the
-          <xmlelement>resourceid</xmlelement> element.</p>
-      <codeblock>&lt;map title="Widget Help">
+      <p>This section shows how <xmlelement>ux-window</xmlelement> and
+          <xmlelement>resourceid</xmlelement> work together to define and use window
+        definitions.</p>
+      <fig id="fig_nky_ftw_3nb">
+        <title>Using <xmlelement>ux-window</xmlelement> with
+          <xmlelement>resourceid</xmlelement></title>
+        <p>The following code sample shows how a window with a name of "help" is defined in the map.
+          The window name is later referenced by the <xmlatt>ux-windowref</xmlatt> attribute on the
+            <xmlelement>resourceid</xmlelement> element.</p>
+        <codeblock>&lt;map title="Widget Help">
  &lt;topicmeta>
-  <b>&lt;ux-window id="fg23" name="csh" top="10" left="20" height="400" width="500" 
+  <b>&lt;ux-window id="fg23" name="help" top="10" left="20" height="400" width="500" 
      features="status=yes,toolbar=no,menubar=no,location=no" relative="yes"
      full-screen="no" /></b>
  &lt;/topicmeta>
@@ -128,14 +134,19 @@
    &lt;topicref href="editing.dita" type="task">
      &lt;topicmeta>  
        <b>&lt;resourceid id="ab43" appname="ua" 
-          appid="5432" ux-context-string="idh_fileedit" ux-windowref="csh" /></b>
+          appid="5432" ux-context-string="idh_fileedit" ux-windowref="help" /></b>
      &lt;/topicmeta>
    &lt;/topicref>
 &lt;/topicref>
 &lt;/map&gt;</codeblock>
-      <p>In this example, different window specifications are defined for tablet and desktop
-        presentation:</p>
-      <codeblock>&lt;map title="Puggles Help"&gt;
+      </fig>
+      <p>This section shows how multiple window specifications can be defined for alternate
+        presentations.</p>
+      <fig id="fig_tvf_jtw_3nb">
+        <title>Using multiple <xmlelement>ux-window</xmlelement> definitions</title>
+        <p>The following code sample shows different window specifications for tablet and display
+          presentation.</p>
+        <codeblock>&lt;map title="Puggles Help"&gt;
  &lt;topicmeta>
  <b>&lt;ux-window id="p76" name="ux-tablet" top="1cm" left="1cm" height="4cm" width="3cm" 
     features="status=no,toolbar=no,menubar=no,location=no" relative="no"
@@ -148,6 +159,7 @@
   &lt;!-- ... -->
  &lt;/topicref>
 &lt;/map&gt;</codeblock>
+      </fig>
     </example>
   </refbody>
 </reference>
