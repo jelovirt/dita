@@ -48,12 +48,7 @@
                                         value are specified, implementations <term
                                                 outputclass="RFC-2119">MAY</term> ignore one of the
                                         two values when they are unable to scale to each direction
-                                        using different factors.</ph></p><p><ph
-                                        id="locktitle-no-purpose">Although
-                                                <xmlatt>locktitle</xmlatt> is available as part of
-                                                <xref
-                                                keyref="attributes-common/commonmapatts"
-                                        />, it has no defined purpose for this element.</ph></p><p id="data-link-universal-keyref-outputclass">The following attributes are available on this
+                                        using different factors.</ph></p><p id="data-link-universal-keyref-outputclass">The following attributes are available on this
                                         element: <xref keyref="attributes-common/dataatts"/>, <xref
 keyref="attributes-common/linkatts"/>, <xref
 keyref="attributes-universal"/>, and <xref
@@ -219,13 +214,11 @@ element. The default value is the empty string "".</dd>
                         </sectiondiv><sectiondiv id="bookmap-frontbackmatter" platform="dita">
                                 <p>The following attributes are available on this element: <xref
                                                 keyref="attributes-universal"/>, <xref
-                                                keyref="attributes-common/commonmapatts"/>, <xref
-                                                keyref="attributes-keyref"
-                                                ><xmlatt>keyref</xmlatt></xref>, and
-                                                <xmlatt>query</xmlatt> from <xref
-                                                keyref="attributes-common/topicrefatts"/>. This element
-                                        also uses <xmlatt>scope</xmlatt>, <xmlatt>format</xmlatt>,
-                                        and <xmlatt>type</xmlatt> from <xref
+                                                keyref="attributes-common/commonmapatts"/>, and
+                                                <xref keyref="attributes-keyref"
+                                                  ><xmlatt>keyref</xmlatt></xref>. This element also
+                                        uses <xmlatt>scope</xmlatt>, <xmlatt>format</xmlatt>, and
+                                                <xmlatt>type</xmlatt> from <xref
                                                 keyref="attributes-common/linkatts"/>.</p>
                         </sectiondiv><sectiondiv>
                                 <p>Define the <keyword>href</keyword> value common to map
@@ -297,9 +290,7 @@ of map.-->
                                                   <dt/>
                                                   <dd/>
                                                   </dlentry>
-                                                  </dl><note
-                                                  conref="conref-file.dita#reuse_file/deprecated-print-attribute"
-                                                  /></dd>
+                                                  </dl><!--<note conref="conref-file.dita#reuse_file/deprecated-print-attribute"/>--></dd>
                                         </dlentry>
                                 </dl>
                         </sectiondiv><sectiondiv>
